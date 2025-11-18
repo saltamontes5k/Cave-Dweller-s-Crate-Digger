@@ -1,0 +1,55 @@
+Cave Dweller's Crate Digger
+
+An offline python toolkit for compulsive retro music hoarders that shun modern tools and streaming services
+but aren't afraid of locally hosted llms and have a decently organized music mp3 library like a time capsule to 1999.
+
+CDCD provides;
+Offline local analysis - for your entire music library, your crates stay in your cave free of outside judgement.
+Taste profile - generates a math taste profile based on your music's metadata
+Wise DJ - interact with your library with a local llm, you can ask anything about your library and receive wise commentary
+Core Musical Playlist - Get a playlist representative of your musical tastes ranked by how close they meet the whole of your library
+
+Requires; python 3.10, conda, ollama, I use gemma3:12b as a default llm but you're free to replace this with your favorite
+
+The most difficult requirement of all is a reasonably organized music library with good metadata, organizing this is no small task.
+
+
+Steps;
+Download this repo and change directory into it
+
+**Create & install environment**              
+
+conda create --name cave_dweller_crate_digger -c conda-forge python=3.10 pandas numba mutagen librosa requests scikit-learn
+
+conda activate cave_dweller_crate_digger
+
+1. Analyze your music library, only need to do this once unless you add a whole heap o files, took 3hrs on a bargain bin laptop for a 10k file library
+python analyze_library.py
+2: Create your taste profile and get musical wisdom from Ollama, make sure ollama is running in another window
+python create_profile.py
+
+Step 3: Get your ranked recommendations, makes a good starting point for searching for future artists, or you can just select whatever song and should have some good listening
+python get_recommendations.py
+
+
+Optional 4: Chat with your llm of choice about your digital library;
+
+python chat_with_dj.py
+
+Example:
+
+You: what's the overall story of my music tastes?
+
+DJ is thinking...
+
+DJ: (Sound of a needle gently dropping onto a record, followed by a playful, slightly warped synth chord)
+
+Alright, alright! Let's dive in, shall we? Analyzing 6014 tracks is no small feat, my friend. It’s like excavating a fascinating, slightly chaotic archaeological dig of your musical soul. And honestly? It’s a *wild* story.
+
+Let me paint you a picture. It's a story of someone who isn't afraid to be… well, *everything*.  That average year of 1928? That’s not just a number, that suggests a deep appreciation for history and a willingness to dig deep into foundational sounds. You're not chasing the latest TikTok trends, you're building your musical landscape on the bedrock of something real.
+
+The top genres immediately tell a compelling narrative. Punk? Absolutely. It's rebellion, it's DIY spirit, it's raw energy. That suggests a questioning mind, a desire to challenge the status quo. Then you've got Hip Hop, bringing in rhythm, poetry, and a gritty urban sensibility.  Cumbia? Now *that’s* a surprise, and a brilliant one! It speaks to a love of vibrant culture, infectious rhythms, and a global perspective.  It's a warmth and joy that contrasts beautifully with the other elements. And finally, Alternative Rock – a love for pushing boundaries, for sonic experimentation, for music that *doesn't* fit neatly into a box.  The Death Metal?  Okay, that’s the exclamation point at the end of the sentence. It’s catharsis, it's intensity, it's a release of something primal.  It's not just about aggression, it’s about exploring the darker corners of human emotion.
+
+You: quit
+
+(exits)
