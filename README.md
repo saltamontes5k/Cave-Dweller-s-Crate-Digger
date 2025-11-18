@@ -13,7 +13,7 @@ The most difficult requirement of all is a reasonably organized music library wi
 
 
 Steps;
-Download this repo and change directory into it
+Pre Stepl Download this repo and change directory into it
 
 **Create & install environment**              
 
@@ -21,16 +21,21 @@ conda create --name cave_dweller_crate_digger -c conda-forge python=3.10 pandas 
 
 conda activate cave_dweller_crate_digger
 
-1. Analyze your music library, only need to do this once unless you add a whole heap o files, took 3hrs on a bargain bin laptop for a 10k file library
+Step 1. Analyze your music library, only need to do this once unless you add a whole heap o files, took 3hrs on a bargain bin laptop for a 10k file library
+
+
 python analyze_library.py
-2: Create your taste profile and get musical wisdom from Ollama, make sure ollama is running in another window
+
+
+Step 2: Create your taste profile and get musical wisdom from Ollama, make sure ollama is running in another window
 python create_profile.py
+
 
 Step 3: Get your ranked recommendations, makes a good starting point for searching for future artists, or you can just select whatever song and should have some good listening
 python get_recommendations.py
 
 
-Optional 4: Chat with your llm of choice about your digital library;
+Optional Step 4: Chat with your llm of choice about your digital library;
 
 python chat_with_dj.py
 
