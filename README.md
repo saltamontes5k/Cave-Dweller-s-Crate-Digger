@@ -1,4 +1,7 @@
 # Cave-Dweller-s-Crate-Digger
+
+![Silly image of paleolithic inspired song wrens in a cave digging through a crate](https://github.com/saltamontes5k/Cave-Dweller-s-Crate-Digger/blob/main/cavedwellercavediggerart.png)
+
 An offline python toolkit for compulsive retro music hoarders that shun modern tools and streaming services but aren't afraid of locally hosted llms and have a decently organized music mp3 library like a time capsule to 1999.
 
 CDCD provides;
